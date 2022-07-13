@@ -1,7 +1,7 @@
 # deployment-helm-spring-petclinic
 
-### This project uses [helm](https://docs.aws.amazon.com/eks/latest/userguide/helm.html) to deploy a project called [PetClinic by Spring](https://github.com/spring-projects/spring-petclinic).
-
+#### This project uses [helm](https://docs.aws.amazon.com/eks/latest/userguide/helm.html) to deploy a project called [PetClinic by Spring](https://github.com/spring-projects/spring-petclinic).
+#
 #### The Helm package manager for Kubernetes helps you install and manage applications on your Kubernetes cluster. For more information, see the Helm documentation. This topic helps you install and run the Helm binaries so that you can install and manage charts using the Helm CLI on your local system.
 
 #
@@ -15,7 +15,7 @@
         2. Tag Image
         3. Push Image to ECR.
  
-### In the DEPLOYMENT stage, I use helm to deploy.
+### In the DEPLOYMENT stage, I use helm to deploy the image from the BUILD stage.
 
       DEPLOY STAGE:
         1. helm upgrade --install --set imageTag=%dep.PetclinicHelm_Build_2.imageTag% petclinic-helm-2 . -v 20 --debug
