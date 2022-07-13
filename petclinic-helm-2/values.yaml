@@ -1,0 +1,29 @@
+replicaCount: 2
+
+image: 
+  name: 415102591172.dkr.ecr.us-east-2.amazonaws.com/majd-petclinic
+  
+imageTag: latest
+
+
+serviceType: LoadBalancer
+serviceListenerPort: 80
+serviceTargetPort: 8080
+
+secretName: database-credentials-helm
+secretType: Opaque
+secretApplicationProperties: |-
+  database=mysql
+  spring.datasource.url=jdbc:mysql://majdpetclinicdb2.c6uzlmqj4yo6.us-west-2.rds.amazonaws.com:3306/majdPetclinicdb2
+  spring.datasource.username=majdrezik
+  spring.datasource.password=UvhH.QAhoPq.hO3-qpTlcEWUxebTK9
+  spring.sql.init.mode=always
+
+
+appName: petclinic-helm-2
+
+volume:
+  name: db-credentials
+  mountPath: /mnt
+
+namespace: majd-ns
