@@ -20,4 +20,4 @@
       DEPLOY STAGE:
         1. helm upgrade --install --set imageTag=%dep.PetclinicHelm_Build_2.imageTag% petclinic-helm-2 . -v 20 --debug
 
-Here I recieve the tag from the BUILD stage and pass it to the DEPLOY in order to deploy the latest successful build.
+***Here I recieve the tag from the BUILD stage and pass it to the DEPLOY in order to deploy the latest successful build.***
