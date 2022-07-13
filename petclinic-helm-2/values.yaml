@@ -1,9 +1,8 @@
 replicaCount: 2
 
 image: 
-  name: 415102591172.dkr.ecr.us-east-2.amazonaws.com/majd-petclinic
-  
-imageTag: latest
+  name: XXXXXXXX.dkr.ecr.XXXXXXXXXX.amazonaws.com/XXXXXXXXXX
+  tag: latest
 
 
 serviceType: LoadBalancer
@@ -13,10 +12,10 @@ serviceTargetPort: 8080
 secretName: database-credentials-helm
 secretType: Opaque
 secretApplicationProperties: |-
-  database=mysql
-  spring.datasource.url=jdb.com:3306/majdPetclinicdb2
-  spring.datasource.username=majdrezik
-  spring.datasource.password=Uvh9
+  database=XXXXXXXXX
+  spring.datasource.url=XXXXXXXXXXXXXXXXXXXXXXXXXX
+  spring.datasource.username=XXXXXXXX
+  spring.datasource.password=XXXXXXXXX
   spring.sql.init.mode=always
 
 
